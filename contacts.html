@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <title>Главная</title>
+    <title>Контакты</title>
     <style>
         /* Высота бокового меню на 100% всей видимости */
         .bg-dark {
@@ -16,7 +16,7 @@
         .card {
             border-radius: 10px; /* Закругление для карточки */
         }
-        /* Кнопка "Купить" с белым фоном и синим текстом */
+        /* Кнопка "Отправить" с белым фоном и синим текстом */
         .btn-custom {
             background-color: white; /* Белый фон для кнопки */
             color: blue; /* Синий цвет текста */
@@ -26,15 +26,13 @@
             background-color: blue; /* Синий фон при наведении */
             color: white; /* Белый цвет текста при наведении */
         }
-        /* Ширина кнопки "Купить" равная ширине описания товара */
+        /* Ширина кнопки "Отправить" равная ширине формы */
         .btn-full-width {
             width: 100%; /* Полная ширина */
         }
-        /* Серый фон для заголовка товара */
-        .product-title {
-            background-color: #f8f9fa; /* Серый фон для заголовка */
-            padding: 10px; /* Отступы вокруг заголовка */
-            border-radius: 10px 10px 0 0; /* Закругление верхней части заголовка */
+        /* Центрирование заголовка и описания */
+        .text-center {
+            text-align: center; /* Центрирование текста */
         }
     </style>
 </head>
@@ -42,14 +40,14 @@
 <div class="container-fluid">
     <div class="row">
         <!-- Боковое меню -->
-        <div class="col-md-2 d-flex flex-column flex-shrink-0 p-3 bg-dark text-white">
+        <div class="col-md-2 d-flex flex-column flex-shrink-0 p-3 text-white bg-dark">
             <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
                 <span class="fs-4">Меню</span>
             </a>
             <hr>
             <ul class="nav nav-pills flex-column mb-auto">
                 <li class="nav-item">
-                    <a href="#" class="nav-link active" aria-current="page">Главная</a>
+                    <a href="#" class="nav-link">Главная</a>
                 </li>
                 <li>
                     <a href="#" class="nav-link">Категории</a>
@@ -57,9 +55,8 @@
                 <li>
                     <a href="#" class="nav-link">Заказы</a>
                 </li>
-
                 <li>
-                    <a href="#" class="nav-link">Контакты</a>
+                    <a href="#" class="nav-link active" aria-current="page">Контакты</a> <!-- Активная страница контактов -->
                 </li>
             </ul>
             <hr>
@@ -72,45 +69,40 @@
         </div>
 
         <!-- Центральная колонка -->
-        <div class="col-md-10 p-3 text-center">
-            <h1>Главная</h1>
-            <p>Вы находитесь на сайте, предназначенном для продажи товаров.</p>
+        <div class="col-md-10 p-3">
+            <h1 class="text-center">Контакты</h1> <!-- Центрирование заголовка -->
+            <p class="text-center">Свяжитесь с нами с помощью формы ниже:</p> <!-- Центрирование описания -->
 
-            <!-- Карточки с товарами -->
             <div class="row mt-4">
-                <div class="col-md-4 mb-4">
-                    <div class="card" style="width: 100%;">
-                        <div class="product-title">
-                            <h5>Товар 1</h5>  <!-- Заголовок товара -->
-                        </div>
+                <div class="col-md-6">
+                    <div class="card mb-4">
                         <div class="card-body">
-                            <h5 class="card-title">Цена: 100$</h5>
-                            <p class="card-text">Описание товара 1.</p>
-                            <a href="#" class="btn btn-custom btn-full-width">Купить</a>
+                            <form>
+                                <div class="form-group">
+                                    <label for="name">Имя</label>
+                                    <input type="text" class="form-control" id="name" placeholder="Введите ваше имя">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Почта</label>
+                                    <input type="email" class="form-control" id="email" placeholder="Введите вашу почту @example.com">
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Сообщение</label>
+                                    <textarea class="form-control" id="message" rows="3" placeholder="Введите ваше сообщение"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-custom btn-full-width">Отправить</button>
+                            </form>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card" style="width: 100%;">
-                        <div class="product-title">
-                            <h5>Товар 2</h5>  <!-- Заголовок товара -->
-                        </div>
+
+                <div class="col-md-6">
+                    <div class="card mb-4">
                         <div class="card-body">
-                            <h5 class="card-title">Цена: 100$</h5>
-                            <p class="card-text">Описание товара 2.</p>
-                            <a href="#" class="btn btn-custom btn-full-width">Купить</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card" style="width: 100%;">
-                        <div class="product-title">
-                            <h5>Товар 3</h5>  <!-- Заголовок товара -->
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Цена: 100$</h5>
-                            <p class="card-text">Описание товара 3.</p>
-                            <a href="#" class="btn btn-custom btn-full-width">Купить</a>
+                            <h5 class="card-title">Наши Контакты</h5>
+                            <p>Телефон: +1 (234) 567-8901</p>
+                            <p>Email: contact@example.com</p>
+                            <p>Адрес: 123 Main St, City, Country</p>
                         </div>
                     </div>
                 </div>
