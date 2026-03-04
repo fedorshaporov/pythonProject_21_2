@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <title>Категории</title>
+    <style>
+        /* Высота бокового меню на 100% всей видимости */
+        .bg-dark {
+            height: 100vh; /* Высота 100% от видимой области */
+            border-top-left-radius: 10px; /* Закругление верхнего левого угла */
+            border-bottom-left-radius: 10px; /* Закругление нижнего левого угла */
+        }
+        /* Закругленные углы для карточек */
+        .card {
+            border-radius: 10px; /* Закругление для карточки */
+        }
+        /* Кнопка "Купить" с белым фоном и синим текстом */
+        .btn-custom {
+            background-color: white; /* Белый фон для кнопки */
+            color: blue; /* Синий цвет текста */
+            border: 1px solid blue; /* Синий цвет рамки */
+        }
+        .btn-custom:hover {
+            background-color: blue; /* Синий фон при наведении */
+            color: white; /* Белый цвет текста при наведении */
+        }
+        /* Ширина кнопки "Купить" равная ширине описания товара */
+        .btn-full-width {
+            width: 100%; /* Полная ширина */
+        }
+        /* Серый фон для заголовка товара */
+        .product-title {
+            background-color: #f8f9fa; /* Серый фон для заголовка */
+            padding: 10px; /* Отступы вокруг заголовка */
+            border-radius: 10px 10px 0 0; /* Закругление верхней части заголовка */
+        }
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <!-- Боковое меню -->
+        <div class="col-md-2 d-flex flex-column flex-shrink-0 p-3 text-white bg-dark">
+            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                <span class="fs-4">Меню</span>
+            </a>
+            <hr>
+            <ul class="nav nav-pills flex-column mb-auto">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Главная</a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link active" aria-current="page">Категории</a> <!-- Активная категория -->
+                </li>
+                <li>
+                    <a href="#" class="nav-link">Заказы</a>
+                </li>
+
+                <li>
+                    <a href="#" class="nav-link">Контакты</a>
+                </li>
+            </ul>
+            <hr>
+
+            <!-- Информация о пользователе -->
+            <div class="mt-auto text-center">
+                <img src="https://github.com/mdo.png" alt="Пользователь" width="50" height="50" class="rounded-circle mb-2">
+                <strong>mdo</strong>
+            </div>
+        </div>
+
+        <!-- Центральная колонка -->
+        <div class="col-md-10 p-3 text-center">
+            <h1>Категории</h1>
+            <p>Выберите категорию товара.</p>
+
+            <!-- Карточки с категориями -->
+            <div class="row mt-4">
+                <div class="col-md-4 mb-4">
+                    <div class="card" style="width: 100%;">
+                        <div class="product-title">
+                            <h5>Категория 1</h5>  <!-- Заголовок категории -->
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Подкатегория 1</h5>
+                            <p class="card-text">Описание категории 1.</p>
+                            <a href="#" class="btn btn-custom btn-full-width">Посмотреть</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card" style="width: 100%;">
+                        <div class="product-title">
+                            <h5>Категория 2</h5>  <!-- Заголовок категории -->
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Подкатегория 2</h5>
+                            <p class="card-text">Описание категории 2.</p>
+                            <a href="#" class="btn btn-custom btn-full-width">Посмотреть</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card" style="width: 100%;">
+                        <div class="product-title">
+                            <h5>Категория 3</h5>  <!-- Заголовок категории -->
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Подкатегория 3</h5>
+                            <p class="card-text">Описание категории 3.</p>
+                            <a href="#" class="btn btn-custom btn-full-width">Посмотреть</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card" style="width: 100%;">
+                        <div class="product-title">
+                            <h5>Категория 4</h5>  <!-- Заголовок категории -->
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Подкатегория 4</h5>
+                            <p class="card-text">Описание категории 4.</p>
+                            <a href="#" class="btn btn-custom btn-full-width">Посмотреть</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card" style="width: 100%;">
+                        <div class="product-title">
+                            <h5>Категория 5</h5>  <!-- Заголовок категории -->
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Подкатегория 5</h5>
+                            <p class="card-text">Описание категории 5.</p>
+                            <a href="#" class="btn btn-custom btn-full-width">Посмотреть</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card" style="width: 100%;">
+                        <div class="product-title">
+                            <h5>Категория 6</h5>  <!-- Заголовок категории -->
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Подкатегория 6</h5>
+                            <p class="card-text">Описание категории 6.</p>
+                            <a href="#" class="btn btn-custom btn-full-width">Посмотреть</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5/8g2f5p9fFAyG0GCGJieUN9Blp1K5yD0T/2T+H9" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-T425Cem4PKF3a62fdZzkC8m4/UomKkfp9P1ff6/doc8N4h4pcDQ3rn+0h54Yi5bKn" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-pzjw8f+ya6F2U+BC7O+6b0Ash1LzZXDJWgLVBLi73xi8ydZSF4W5/AZqecCGb1Ai" crossorigin="anonymous"></script>
+
+</body>
+</html>
